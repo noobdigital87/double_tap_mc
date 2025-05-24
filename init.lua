@@ -22,8 +22,12 @@ dg_sprint_core.RegisterStep(your_mod_name, "SPRINT", 0.2, function(player, state
 	if detected ~= state.is_sprinting then
 		state.is_sprinting = detected
 		dg_sprint_core.McSprint(player, state.is_sprinting)
+
 	end
 end)
 
-
-
+dg_sprint_core.RegisterStep(your_mod_name, "DRAIN", 0.2, function(player, state, dtime)
+	if state.is_sprinting then
+		mcl_hunger.exhaust(player:get_player_name(), mcl_hunger.EXHAUST_SPRINT)
+	end
+end)
