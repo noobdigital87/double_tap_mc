@@ -1,8 +1,7 @@
 local your_mod_name = core.get_current_modname()
 
 local settings = {
-	enable_sprint = true,
-    	aux1 = false,
+    	aux1 = true,
     	double_tap = true,
     	tap_interval = 0.5,
 }
