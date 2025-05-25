@@ -1,7 +1,7 @@
 local your_mod_name = core.get_current_modname()
 
 local settings = {
-    	aux1 = true,
+    	aux1 = false,
     	double_tap = true,
     	tap_interval = tonumber(core.settings:get(your_mod_name .. ".tap_interval")) or 0.5,
 	
