@@ -6,7 +6,7 @@ local settings = {
     	tap_interval = tonumber(core.settings:get(your_mod_name .. ".tap_interval")) or 0.5,
 	
 }
-dg_sprint_core.McSpeed(tonumber(core.settings:get(your_mod_name .. ".set_speed")) or 0.8)
+dg_sprint_core.McSpeed(tonumber(core.settings:get(your_mod_name .. ".set_speed")) or 1.8)
 dg_sprint_core.RegisterStep(your_mod_name, "DETECT", tonumber(core.settings:get(your_mod_name .. ".detection_step")) or 0.1, function(player, state, dtime)
 	local detected = dg_sprint_core.IsSprintKeyDetected(player, false, settings.double_tap, settings.tap_interval) and dg_sprint_core.ExtraSprintCheck(player)
 	if detected ~= state.detected then
