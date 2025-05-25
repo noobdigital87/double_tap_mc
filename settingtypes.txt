@@ -1,4 +1,4 @@
-double_tap_mc.set_speed (Set speed boost) float 0.8
+double_tap_mc.set_speed (Set speed) float 1.8
 double_tap_mc.tap_interval (Tap interval) float 0.5
 
 [Advanced]
