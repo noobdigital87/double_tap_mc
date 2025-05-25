@@ -8,9 +8,7 @@ local settings = {
 }
 
 dg_sprint_core.RegisterStep(your_mod_name, "DETECT", 0.1, function(player, state, dtime)
-	
-	local detected = dg_sprint_core.IsSprintKeyDetected(player, false, settings.double_tap, settings.tap_interval) and dg_sprint_core.IsMoving(player)
-
+	local detected = dg_sprint_core.IsSprintKeyDetected(player, false, settings.double_tap, settings.tap_interval) and dg_sprint_core.ExtraSprintCheck(player)
 	if detected ~= state.detected then
 		state.detected = detected
 	end
@@ -27,7 +25,7 @@ dg_sprint_core.RegisterStep(your_mod_name, "SPRINT", 0.2, function(player, state
 end)
 
 dg_sprint_core.RegisterStep(your_mod_name, "DRAIN", 0.2, function(player, state, dtime)
-	if state.is_sprinting then
+	if state.is_sprinting and dg_sprint_core.ExtraDrainCheck(player) then
 		mcl_hunger.exhaust(player:get_player_name(), mcl_hunger.EXHAUST_SPRINT)
 	end
 end)
