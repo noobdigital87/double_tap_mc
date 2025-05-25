@@ -1,1 +1,7 @@
-double_tap_mc.set_speed (Set sprint speed) float 0.8
+double_tap_mc.set_speed (Set speed boost) float 0.8
+double_tap_mc.tap_interval (Tap interval) float 0.5
+
+[Advanced]
+double_tap_mc.detection_step (Detection step interval) float 0.1
+double_tap_mc.sprint_step (Sprint step interval) float 0.2
+double_tap_mc.drain_step (Drain step interval) float 0.2
