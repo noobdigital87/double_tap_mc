@@ -26,10 +26,10 @@ api.register_server_step(your_mod_name, "SPRINT", tonumber(core.settings:get(you
     end
 
     if state.detected then
-        local sprint_settings = {speed = settings.speed, jump = settings.jump, particles = settings.particles}
+        local sprint_settings = {speed = settings.speed, jump = settings.jump}
         api.set_sprint(your_mod_name, player, state.detected, sprint_settings)
     else
-        local sprint_settings = {speed = settings.speed, jump = settings.jump, particles = settings.particles}
+        local sprint_settings = {speed = settings.speed, jump = settings.jump}
         api.set_sprint(your_mod_name, player, state.detected, sprint_settings)
     end
 end)
