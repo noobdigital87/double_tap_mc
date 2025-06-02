@@ -1,6 +1,6 @@
 local your_mod_name = core.get_current_modname()
 
-local api = dg_sprint_core.v2
+local api = dg_sprint_core
 
 local settings = {
     	aux1 = true,
